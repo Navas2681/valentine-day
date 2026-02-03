@@ -2,29 +2,55 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Will you be my Valentine?</title>
+  <title>For You 💗</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="card" id="card">
-  <div class="emoji">🐱💗</div>
-
-  <h2>nirali will you be my valentine?</h2>
-
-  <div class="buttons">
-    <button id="yes">Yes</button>
-    <button id="no">No</button>
-  </div>
-
-  <p class="note">"No" seems a bit shy 😈</p>
+<!-- Page 1 -->
+<div class="page active" id="p1">
+  <h1>They say people don’t put effort into love anymore.</h1>
+  <p>But they’ve never seen what love looks like when it’s real.</p>
+  <button onclick="show('p2')">next</button>
 </div>
 
-<div class="card hidden" id="yay">
-  <h1>YAY! 🎉💖</h1>
+<!-- Page 2 -->
+<div class="page" id="p2">
+  <h2>Hey… 🥺</h2>
+  <p>I made something small for you.<br>Do you wanna see?</p>
+  <button onclick="show('yesPage')">yes</button>
+  <button onclick="show('noPage')">no</button>
 </div>
 
+<!-- No Page -->
+<div class="page" id="noPage">
+  <h2>umm… 😳</h2>
+  <p>that hurt a little</p>
+  <button onclick="show('p2')">try again</button>
+</div>
+
+<!-- Yes Page -->
+<div class="page" id="yesPage">
+  <h2>yay 🥺💗</h2>
+  <p>that made me smile</p>
+  <button onclick="show('p4')">next</button>
+</div>
+
+<!-- Valentine Question -->
+<div class="page" id="p4">
+  <h2>Will you be my Valentine? 💕</h2>
+  <button onclick="show('finalPage')">ofc</button>
+  <button class="runaway" onmouseover="move(this)">nopes</button>
+</div>
+
+<!-- Final Page -->
+<div class="page" id="finalPage">
+  <h2>thank you 🥺💗</h2>
+  <p>I really like you.</p>
+</div>
+
+<!-- Script -->
 <script src="script.js"></script>
+
 </body>
 </html>
