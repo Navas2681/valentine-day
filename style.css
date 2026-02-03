@@ -32,3 +32,20 @@ button {
 .runaway {
   position: absolute;
 }
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1, h2 {
+  max-width: 90%;
+  margin: 0 auto 12px;
+}
+
+p {
+  max-width: 90%;
+  margin: 0 auto 20px;
+}
