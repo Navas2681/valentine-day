@@ -89,3 +89,15 @@ button {
 .share-btn.whatsapp {
   background: #25D366;
 }
+
+#yesBox img {
+  width: 100%;
+  max-width: 260px;
+  height: auto;
+  display: block;
+  margin: 16px auto 0;
+}
+
+.card {
+  overflow: hidden;
+}
