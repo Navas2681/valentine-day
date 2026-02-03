@@ -33,13 +33,6 @@ button {
   position: absolute;
 }
 
-body {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 h1, h2 {
   max-width: 90%;
   margin: 0 auto 12px;
@@ -48,4 +41,39 @@ h1, h2 {
 p {
   max-width: 90%;
   margin: 0 auto 20px;
+}
+
+.page {
+  display: none;              /* hidden by default */
+  min-height: 100vh;
+  width: 100%;
+  padding: 24px;
+  box-sizing: border-box;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.page.active {
+  display: flex;              /* ONLY active page shows */
+}
+
+h1 {
+  font-size: clamp(20px, 5vw, 36px);
+}
+
+h2 {
+  font-size: clamp(18px, 4.5vw, 28px);
+}
+
+p {
+  font-size: clamp(14px, 4vw, 18px);
+}
+
+button {
+  font-size: 16px;
+  padding: 14px 28px;
+  min-width: 100px;
 }
