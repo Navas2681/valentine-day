@@ -26,7 +26,6 @@ const boy = params.get("boy");
 // PAGE STATE ON LOAD
 // =====================
 if (girl && boy) {
-  // Someone opened a shared link
   creator.style.display = "none";
   ask.style.display = "block";
   yesBox.style.display = "none";
@@ -34,7 +33,6 @@ if (girl && boy) {
   questionText.innerText =
     `Hey ${girl}, will you be ${boy}'s Valentine? 💖`;
 } else {
-  // Creator mode
   creator.style.display = "block";
   ask.style.display = "none";
   yesBox.style.display = "none";
@@ -54,18 +52,18 @@ document.getElementById("createLink").addEventListener("click", () => {
     return;
   }
 
-  const isLocal =
-    location.hostname === "127.0.0.1" || location.hostname === "localhost";
+  // ✅ AUTO-DETECT CURRENT SITE (works for pages.dev, github.io, localhost)
+  const baseURL =
+    window.location.origin + window.location.pathname.replace(/\/$/, "");
 
-  const baseURL = isLocal
-    ? window.location.origin + window.location.pathname
-    : "https://navas2681.github.io/valentine-day/";
-
-  generatedLink =
+  const generatedLink =
     `${baseURL}?girl=${encodeURIComponent(g)}&boy=${encodeURIComponent(b)}`;
 
   document.getElementById("linkBox").innerHTML =
     `<a href="${generatedLink}" target="_blank">${generatedLink}</a>`;
+
+  // store globally for share buttons
+  window.generatedLink = generatedLink;
 });
 
 // =====================
