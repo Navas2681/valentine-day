@@ -3,30 +3,51 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Be My Valentine 💘</title>
+  <title>Valentine Generator 💘</title>
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-  <div class="card" id="ask">
-    <div class="emoji">💘</div>
-    <h2>Hey Noorjahan, will you be my Valentine?</h2>
+<!-- CREATE LINK SCREEN -->
+<div class="card" id="creator">
+  <h2>Create your Valentine 💖</h2>
 
-    <div class="actions">
-      <button id="no">No</button>
-      <button id="yes">Yes</button>
-    </div>
+  <input type="text" id="boyName" placeholder="Your name">
+  <input type="text" id="girlName" placeholder="Her name">
 
-    <div class="hint">The “No” button is nervous 😅</div>
+  <button id="createLink">Generate Link 🔗</button>
+
+ <p id="linkBox"></p>
+
+<div class="share-area">
+  <button id="shareBtn" class="share-btn">Share 💌</button>
+  <button id="whatsappBtn" class="share-btn whatsapp">WhatsApp 🟢</button>
+</div>
+
+<!-- VALENTINE QUESTION SCREEN -->
+<div class="card hidden" id="ask">
+  <div class="emoji">💘</div>
+  <h2 id="questionText"></h2>
+
+  <div class="actions">
+    <button id="no">No</button>
+    <button id="yes">Yes</button>
   </div>
 
-  <div class="card result" id="yesBox">
-    <h1>YAY!!! 🎉💖</h1>
-    <p>You just made my day 🥹</p>
-    <img src="https://media.giphy.com/media/26BRv0ThflsHCqDrG/giphy.gif" alt="Happy">
-  </div>
+  <div class="hint">The “No” button is shy 😅</div>
+</div>
 
-  <script src="script.js"></script>
+<!-- RESULT SCREEN -->
+<div class="card hidden" id="yesBox">
+  <h1 id="resultText">YAY!!! 🎉</h1>
+  <p>Love is in the air 💖</p>
+  <img src="https://media.giphy.com/media/26BRv0ThflsHCqDrG/giphy.gif">
+</div>
+
+<audio id="bgMusic">
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<script src="script.js"></script>
 </body>
 </html>
